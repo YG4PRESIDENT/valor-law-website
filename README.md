@@ -5,8 +5,8 @@ A simple, authentic website for Valor Law, LLC - a Grants Pass attorney practice
 ## Tech Stack
 
 - **Frontend:** Pure HTML + CSS + JavaScript (no framework)
-- **Hosting:** Netlify (free tier)
-- **Form Handling:** Netlify Forms (built-in)
+- **Hosting:** GitHub Pages (free)
+- **Form Handling:** Formspree (free tier) - see setup instructions below
 
 ## Local Development
 
@@ -21,24 +21,28 @@ A simple, authentic website for Valor Law, LLC - a Grants Pass attorney practice
    ```
 3. Visit `http://localhost:8000` in your browser
 
-## Deployment to Netlify
+## Deployment to GitHub Pages
 
-1. Push this repository to GitHub
-2. Go to [Netlify](https://www.netlify.com) and sign in
-3. Click "Add new site" → "Import an existing project"
-4. Connect your GitHub repository
-5. Netlify will auto-detect settings:
-   - Build command: (leave empty)
-   - Publish directory: `.` (root)
-6. Click "Deploy site"
-7. Once deployed, configure your custom domain (carlclyde.com) in Netlify settings
+1. Push this repository to GitHub (already done!)
+2. Go to your repository on GitHub: `https://github.com/YG4PRESIDENT/valor-law-website`
+3. Click **Settings** → **Pages**
+4. Under "Source", select **GitHub Actions**
+5. The site will automatically deploy when you push to the `master` branch
+6. Your site will be live at: `https://YG4PRESIDENT.github.io/valor-law-website`
+7. To use a custom domain (carlclyde.com):
+   - In Pages settings, add your custom domain
+   - Update your domain's DNS to point to GitHub Pages (instructions will appear)
 
-## Form Submissions
+## Form Setup (Formspree)
 
-Contact form submissions will automatically appear in your Netlify dashboard under "Forms". You can:
-- View submissions online
-- Set up email notifications
-- Export submissions as CSV
+The contact form uses Formspree for submissions. To set it up:
+
+1. Go to [Formspree.io](https://formspree.io) and create a free account
+2. Create a new form - you'll get a form ID (looks like `xqwerty123`)
+3. In `index.html`, replace `YOUR_FORM_ID` on line 103 with your actual Formspree form ID
+4. Formspree will email you submissions (free tier: 50 submissions/month)
+
+Alternatively, you can remove the form and just use the phone/email links displayed.
 
 ## Customization
 
@@ -59,7 +63,9 @@ Contact form submissions will automatically appear in your Netlify dashboard und
 │   └── main.js         # JavaScript functionality
 ├── images/
 │   └── valor_law_logo.jpeg
-├── netlify.toml        # Netlify configuration
+├── .github/
+│   └── workflows/
+│       └── deploy.yml  # GitHub Pages deployment workflow
 └── README.md           # This file
 ```
 

@@ -66,16 +66,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Form submission handling (Netlify will handle the actual submission)
-    const contactForm = document.querySelector('form[name="contact"]');
+    // Form submission handling
+    const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            // Netlify handles the submission, but we can add a loading state
+            // Add loading state
             const submitButton = contactForm.querySelector('button[type="submit"]');
             if (submitButton) {
                 submitButton.textContent = 'Sending...';
                 submitButton.disabled = true;
             }
+            // Formspree handles the actual submission
         });
     }
 });
