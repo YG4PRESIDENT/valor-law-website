@@ -141,13 +141,16 @@ ul { list-style: none; }
 .btn-nav {
     background-color: var(--color-forest-green);
     color: var(--color-white) !important;
-    padding: 0.75rem 1.5rem;
-    border-radius: var(--border-radius);
-    transition: background-color 0.2s ease;
+    padding: 0.75rem 1.75rem;
+    border-radius: 50px; /* Match pill shape */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(45, 80, 22, 0.2);
 }
 
 .btn-nav:hover {
     background-color: var(--color-dark-forest);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(45, 80, 22, 0.3);
 }
 
 /* ============================================
@@ -210,36 +213,43 @@ ul { list-style: none; }
 .btn {
     display: inline-block;
     padding: 1rem 2.5rem;
-    border-radius: var(--border-radius);
-    font-weight: 600;
+    border-radius: 50px; /* Soft, modern pill shape */
+    font-weight: 700;
     text-align: center;
-    transition: all 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth, sophisticated ease */
     border: none;
     cursor: pointer;
     font-size: 0.9rem;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Soft initial shadow */
 }
 
 .btn-primary {
     background-color: var(--color-gold);
     color: #fff;
+    border: 2px solid var(--color-gold); /* Ensure alignment with secondary */
 }
 
 .btn-primary:hover {
     background-color: var(--color-gold-hover);
-    transform: translateY(-1px);
+    border-color: var(--color-gold-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(201, 162, 93, 0.3); /* Glowing soft shadow */
 }
 
 .btn-secondary {
     background-color: transparent;
     color: var(--color-forest-green);
     border: 2px solid var(--color-forest-green);
+    box-shadow: none;
 }
 
 .btn-secondary:hover {
     background-color: var(--color-forest-green);
     color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(45, 80, 22, 0.2);
 }
 
 /* ============================================
