@@ -154,7 +154,7 @@ ul { list-style: none; }
     align-items: center;
     justify-content: center;
     /* Updated to use local image */
-    background-image: url('../images/caveman_bridge_hero.jpeg'); 
+    background-image: url('../images/official_caveman_bridge.png'); 
     background-size: cover;
     background-position: center;
     color: var(--color-white);
