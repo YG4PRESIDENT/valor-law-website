@@ -404,6 +404,14 @@ ul { list-style: none; }
     box-shadow: var(--shadow-subtle);
 }
 
+/* Added spacing for About CTA buttons */
+.about-cta {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 5rem; /* Significant spacing above buttons */
+    flex-wrap: wrap;
+}
+
 /* ============================================
    Footer - Revamped Layout
    ============================================ */
